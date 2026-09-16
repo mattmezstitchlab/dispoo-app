@@ -1,0 +1,12 @@
+{
+  "name": "dispoo-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dispoo — kit de correctifs V1. Ce dépôt ne contient pas la source de l'application : voir README.md.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/vercel-build.mjs"
+  }
+}
