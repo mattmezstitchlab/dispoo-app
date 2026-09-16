@@ -1,0 +1,38 @@
+# ── dependencies & build output ─────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+build/
+.vercel/
+.vercel-tmp/
+*.local
+
+# ── secrets : ne JAMAIS pousser ─────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vercel/project.json
+
+# ── caches & outil de génération (artefacts Arena/Vite) ─────────
+.cache/
+.vite/
+.eslintcache
+*.tsbuildinfo
+coverage/
+node_modules/.vite/
+
+# ── OS / éditeur ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
+npm-debug.log*
+
+# ── artefacts de snapshot / inspection DOM (ne doivent pas survivre au build) ──
+**/rrweb*
+**/*arena_rec*
+**/agon*

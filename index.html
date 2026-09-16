@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Dispoo — état du dépôt</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0f1115;
+      color: #e8eaf0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main { max-width: 640px; padding: 2.5rem 1.5rem; }
+    h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
+    p { color: #b8bdc9; }
+    .badge {
+      display: inline-block;
+      font-size: .8rem;
+      padding: .15rem .6rem;
+      border-radius: 999px;
+      border: 1px solid #3a4150;
+      color: #9aa3b5;
+      margin-bottom: 1rem;
+    }
+    ul { color: #b8bdc9; padding-left: 1.2rem; }
+    code {
+      font-family: ui-monospace, monospace;
+      font-size: .9em;
+      background: #1a1e26;
+      border: 1px solid #2a3040;
+      border-radius: 4px;
+      padding: .1rem .35rem;
+    }
+    footer { margin-top: 2rem; font-size: .85rem; color: #6b7385; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="badge">Déploiement minimal — volontaire</span>
+    <h1>Dispoo</h1>
+    <p>
+      Ce dépôt ne contient <strong>pas</strong> la source de l'application Dispoo :
+      uniquement le <strong>kit de correctifs V1</strong> (<code>v1-kit/</code>).
+      C'est pourquoi cette page est servie à la place de l'application.
+    </p>
+    <p>Contenu du dépôt :</p>
+    <ul>
+      <li><code>v1-kit/vercel.json</code> — routage SPA <code>/e/{code}</code> + en-têtes</li>
+      <li><code>v1-kit/api/_lib/guard.js</code> — garde-fous de l'API</li>
+      <li><code>v1-kit/sql/001_v1_hardening.sql</code> — durcissement Postgres</li>
+      <li><code>v1-kit/docs/</code> — recette, routage, copie française</li>
+      <li><code>v1-kit/scripts/verify-v1.sh</code> — test de production obligatoire</li>
+    </ul>
+    <footer>
+      Détails et preuves : <code>README.md</code> et <code>v1-kit/docs/STATE-AUDIT.md</code>.
+    </footer>
+  </main>
+</body>
+</html>
