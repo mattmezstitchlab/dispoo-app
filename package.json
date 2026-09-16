@@ -1,12 +1,23 @@
 {
   "name": "dispoo-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "Dispoo — kit de correctifs V1. Ce dépôt ne contient pas la source de l'application : voir README.md.",
+  "type": "module",
+  "description": "Dispoo — proposez, partagez, votez. Application V1 (voir README.md).",
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "build": "node scripts/vercel-build.mjs"
+    "build": "node scripts/vercel-build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "verify:clean": "grep -riE 'rrweb|arena|agon|__arena_rec' dist/ && { echo 'build pollué'; exit 1; } || echo 'build propre'",
+    "verify": "bash v1-kit/scripts/verify-v1.sh",
+    "test": "node scripts/test-pg.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.14"
   }
 }
